@@ -8,6 +8,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+const vuxLoader = require('vux-loader')
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
@@ -49,6 +51,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       inject: true
     }),
   ]
+})
+
+module.exports = vuxLoader.merge(devWebpackConfig, {
+  options: {},
+  plugins: [{
+    name: 'vux-ui'
+  }]
 })
 
 module.exports = new Promise((resolve, reject) => {

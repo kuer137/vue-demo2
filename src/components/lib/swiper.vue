@@ -129,20 +129,20 @@
   ]
 
   const urlList = baseList.map((item, index) => ({
-      url: 'http://m.baidu.com',
-      img: item.img,
-      fallbackImg: item.fallbackImg,
-      title: `(可点击)${item.title}`
-    }))
+    url: 'http://m.baidu.com',
+    img: item.img,
+    fallbackImg: item.fallbackImg,
+    title: `(可点击)${item.title}`
+  }))
 
   const demoList = imgList.map((one, index) => ({
-      url: 'javascript:',
-      img: one
-    }))
+    url: 'javascript:',
+    img: one
+  }))
 
   const only2ClickList = baseList.slice(0, 2).map(item => {
     item.url = 'http://m.baidu.com'
-  return item
+    return item
   })
 
   export default {

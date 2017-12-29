@@ -9,6 +9,7 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+
 let webpackConfig = {
   context: path.resolve(__dirname, '../'),
   entry: {
@@ -79,6 +80,8 @@ let webpackConfig = {
 }
 
 
+
 module.exports = vuxLoader.merge(webpackConfig, {
+  options: {},
   plugins: ['vux-ui', 'progress-bar', 'duplicate-style']
 })
