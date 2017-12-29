@@ -6,6 +6,10 @@
       <router-link to="/checklist">Checklist</router-link>
       <br>
       <router-link to="/confirm">confirm</router-link>
+      <br>
+      <router-link to="/form">form</router-link>
+      <br>
+      <router-link to="/swiper">swiper</router-link>
     </p>
   </div>
 </template>
